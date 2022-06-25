@@ -13,6 +13,9 @@ interface GetLessonBySlugQueryResponse {
             avatarURL: string;
             name: string;
         }
+        challenge: {
+            url: string;
+        }
     }
 }
 
@@ -73,12 +76,12 @@ export function Video(props: VideoProps) {
                     </div>
 
                     <div className="flex flex-col gap-4">
-                        <a href="" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
+                        <a href="https://discord.gg/jHCuu8P9" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
                             <DiscordLogo size={24} />
                             Comunidade do Discord
                         </a>
 
-                        <a href="" className="p-4 text-sm border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors">
+                        <a href={data.lesson.challenge?.url} className={`${!data.lesson.challenge && 'hidden'} p-4 text-sm border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors`}>
                             <Lightning size={24} />
                             Acesse o Desafio
                         </a>
@@ -86,7 +89,7 @@ export function Video(props: VideoProps) {
                 </div>
 
                 <div className="gap-8 mt-20 grid grid-cols-2 ">
-                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                    <a href="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-600 h-full p-6 flex items-center">
                             <FileArrowDown size={40} />
                         </div>
@@ -102,7 +105,7 @@ export function Video(props: VideoProps) {
                         </div>
                     </a>
 
-                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                    <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-600 h-full p-6 flex items-center">
                             <FileArrowDown size={40} />
                         </div>
