@@ -8,5 +8,8 @@
                 avatarURL
                 name
             }
+            challenge {
+                url
+            }
         }
     }
